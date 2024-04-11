@@ -1,0 +1,1 @@
+{"version":3,"file":"generate-slug.js","sourceRoot":"","sources":["../../src/utils/generate-slug.ts"],"names":[],"mappings":";;;AAAA,SAAgB,YAAY,CAAC,IAAY;IACxC,OAAO,IAAI;SACT,WAAW,EAAE;SACb,OAAO,CAAC,MAAM,EAAE,GAAG,CAAC;SACpB,OAAO,CAAC,aAAa,EAAE,EAAE,CAAC;SAC1B,OAAO,CAAC,QAAQ,EAAE,GAAG,CAAC;SACtB,OAAO,CAAC,UAAU,EAAE,EAAE,CAAC,CAAC;AAC3B,CAAC;AAPD,oCAOC"}

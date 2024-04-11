@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "server.ts",
 	"scripts": {
-		"start": "node dist/server.js",
-		"start:dev": "nodemon src/server.ts",
+		"postinstall": "prisma generate",
+		"start": "nodemon src/server.ts",
 		"build": "rimraf dist && tsc",
 		"ts.check": "tsc --project tsconfig.json",
 		"add-build": "git add dist",
