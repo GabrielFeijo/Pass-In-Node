@@ -6,7 +6,7 @@ O Pass.in é uma aplicação dedicada à gestão eficiente de participantes em e
 
 ## 👾 Experimente
 
-Para documentação da API, acesse o link: [Pass-In-Docs]().
+Para documentação da API, acesse o link: [Pass-In-Docs](https://pass-in-node.vercel.app/docs).
 
 ## 🚀 Começo
 
