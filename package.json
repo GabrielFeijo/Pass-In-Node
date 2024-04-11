@@ -2,10 +2,10 @@
 	"name": "server-node",
 	"version": "1.0.0",
 	"description": "",
-	"main": "public/server.js",
+	"main": "public/server.mjs",
 	"scripts": {
 		"dev": "tsx watch src/server.ts",
-		"build": "tsup src --format esm --dts --minify --legacy-output --publicDir",
+		"build": "tsup src --format esm --dts --minify --publicDir",
 		"start": "node public/server.mjs",
 		"db:migrate": "prisma migrate dev",
 		"db:studio": "prisma studio",
