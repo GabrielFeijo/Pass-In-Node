@@ -14,7 +14,7 @@ export async function getEvents(app: FastifyInstance) {
 					200: z.object({
 						events: z.array(
 							z.object({
-								id: z.string().uuid(),
+								id: z.string().regex(/^[0-9a-f]{24}$/),
 								title: z.string(),
 								slug: z.string(),
 								details: z.string().nullable(),

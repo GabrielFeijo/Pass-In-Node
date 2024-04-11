@@ -21,7 +21,7 @@ export async function getEventAttendees(app: FastifyInstance) {
 					200: z.object({
 						attendees: z.array(
 							z.object({
-								id: z.number(),
+								id: z.string().regex(/^[0-9a-f]{24}$/),
 								name: z.string(),
 								email: z.string().email(),
 								createdAt: z.date(),

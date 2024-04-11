@@ -15,11 +15,11 @@ export async function registerForEvent(app: FastifyInstance) {
 					email: z.string().email(),
 				}),
 				params: z.object({
-					eventId: z.string().uuid(),
+					eventId: z.string().regex(/^[0-9a-f]{24}$/),
 				}),
 				response: {
 					201: z.object({
-						attendeeId: z.number(),
+						attendeeId: z.string().regex(/^[0-9a-f]{24}$/),
 					}),
 					409: z.string(),
 				},

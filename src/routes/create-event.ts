@@ -19,7 +19,7 @@ export async function createEvent(app: FastifyInstance) {
 				response: {
 					201: z.object({
 						event: z.object({
-							id: z.string().uuid(),
+							id: z.string().regex(/^[0-9a-f]{24}$/),
 							title: z.string(),
 							slug: z.string(),
 							details: z.string().nullable(),

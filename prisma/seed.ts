@@ -4,7 +4,7 @@ import { Prisma } from '@prisma/client';
 import dayjs from 'dayjs';
 
 async function seed() {
-	const eventId = '9e9bd979-9d10-4915-b339-3786b1634f33';
+	const eventId = faker.database.mongodbObjectId();
 
 	await prisma.event.deleteMany();
 
@@ -22,7 +22,7 @@ async function seed() {
 
 	for (let i = 0; i <= 120; i++) {
 		attendeesToInsert.push({
-			id: 10000 + i,
+			id: faker.database.mongodbObjectId(),
 			name: faker.person.fullName(),
 			email: faker.internet.email(),
 			eventId,

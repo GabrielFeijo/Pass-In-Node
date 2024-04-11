@@ -10,7 +10,7 @@ export async function getAttendeeBadge(app: FastifyInstance) {
 			schema: {
 				summary: 'Retorna o badge de um participante',
 				tags: ['Participantes'],
-				params: z.object({ attendeeId: z.coerce.number().int() }),
+				params: z.object({ attendeeId: z.string().regex(/^[0-9a-f]{24}$/) }),
 				response: {
 					200: z.object({
 						badge: z.object({

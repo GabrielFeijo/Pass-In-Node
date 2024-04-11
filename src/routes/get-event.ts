@@ -11,11 +11,11 @@ export async function getEvent(app: FastifyInstance) {
 				summary: 'Retorna um evento',
 				tags: ['Eventos'],
 				params: z.object({
-					eventId: z.string().uuid(),
+					eventId: z.string().regex(/^[0-9a-f]{24}$/),
 				}),
 				response: {
 					200: z.object({
-						id: z.string().uuid(),
+						id: z.string().regex(/^[0-9a-f]{24}$/),
 						title: z.string(),
 						slug: z.string(),
 						details: z.string().nullable(),
