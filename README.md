@@ -41,7 +41,7 @@ npm install
 DATABASE_URL="mongodb://127.0.0.1:27017/PassIn"
 
 # Inicie a aplicação em DEV:
-$ npm run dev
+$ npm run start
 ```
 
 ## Requisitos
