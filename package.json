@@ -2,15 +2,21 @@
 	"name": "server-node",
 	"version": "1.0.0",
 	"description": "",
-	"main": "public/server.mjs",
+	"main": "index.js",
 	"scripts": {
-		"dev": "tsx watch src/server.ts",
-		"build": "tsup src --format esm --dts --minify --publicDir",
-		"start": "node public/server.mjs",
+		"start": "nodemon src/server.ts",
+		"build": "rimraf dist && tsc",
+		"ts.check": "tsc --project tsconfig.json",
+		"add-build": "git add dist",
 		"db:migrate": "prisma migrate dev",
 		"db:studio": "prisma studio",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"pre-commit": [
+		"ts.check",
+		"build",
+		"add-build"
+	],
 	"keywords": [],
 	"author": "Gabriel Feijó",
 	"license": "ISC",
@@ -20,8 +26,12 @@
 	"devDependencies": {
 		"@faker-js/faker": "^8.4.1",
 		"@types/node": "^20.12.3",
+		"concurrently": "^8.2.2",
+		"nodemon": "^3.1.0",
+		"pre-commit": "^1.2.2",
 		"prisma": "^5.12.0",
-		"tsup": "^8.0.2",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.2",
 		"tsx": "^4.7.1",
 		"typescript": "^5.4.3"
 	},

@@ -44,7 +44,7 @@ export async function createEvent(app: FastifyInstance) {
 			}
 
 			const event = await prisma.event.create({
-				data: { ...data, slug },
+				data: { ...data, title: data.title, slug },
 			});
 
 			return reply.status(201).send({ event });
